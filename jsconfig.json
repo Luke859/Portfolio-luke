@@ -1,0 +1,14 @@
+{
+    "include":[ //source of the project 
+        "./scr/**/*"
+    ],
+
+    "compilerOptions": {
+
+        "baseUrl": ".", //where the base directory of non moduale 
+
+        "paths": {
+            "@/*": ["./scr/*"],
+        }
+    }
+}
