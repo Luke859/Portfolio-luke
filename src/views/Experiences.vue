@@ -1,7 +1,43 @@
 <template>
     <section class="s3">
         <div class="main-container">
-            <h1>Experiences</h1>
+            <h1>MES EXPERIENCES</h1>
+            <div class="experiences">
+                <div class="left-card"> 
+                    <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="../assets/atlanticTobo.png" alt="Card image cap">
+                        <div class="card-body">
+                            <h4 class="card-title"> Atlantic Toboggan</h4>
+                            <p class="card-text">Travail dans un Parc aquatique "Atlantic Toboggan" à Saint Jean de Monts, d'une durée de 2 mois.
+                                Poste de surveillant des toboggans : la mission -> surveillance des clients pour assurer leurs sécurités.
+                                Travail en équipe et individuel.</p>
+                            <a target="_blank" href="https://www.atlantic-toboggan.com/" download="" class="atlantic">Lien vers le site</a>
+                        </div>                 
+                    </div>
+                </div>
+
+                <div class="middle-card">
+                    <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="../assets/LOGO CHALLENGE 48H.png" alt="Card image cap" style="width: 178px; margin: 0 auto;">
+                        <div class="card-body">
+                            <h4 class="card-title"> Challenge 48h</h4>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet a voluptatem architecto, necessitatibus sapiente qui distinctio praesentium vero harum eos ut, totam quos asperiores voluptatum labore minima cupiditate aliquid quam!</p>
+                            <a target="_blank" href="https://www.ynov-nantes.com/actualites/challenge-48h/" download="" class="atlantic">Plus de detail </a>
+                        </div>                 
+                    </div>
+                </div>
+
+                <div class="right-card">
+                    <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="../assets/ydays.png" alt="Card image cap">
+                        <div class="card-body">
+                            <h4 class="card-title">Projet YDays</h4>
+                            <p class="card-text">Les Ydays, ce sont 10 journées dans le calendrier académique, dédiées à la conduite de projets. Lors des Ydays, nous sommes een groupe est construisons notre projet de A à Z</p>
+                            <a target="_blank" href="https://www.ynov-nantes.com/qui-sommes-nous/ydays/" download="" class="atlantic">Pour plus d'info</a>
+                        </div>                 
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 </template>
@@ -25,4 +61,80 @@ h1{
 p {
     color: var(--secondaryText);
 }
+
+.main-container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 1200px){
+    .main-container {
+        width: 95%
+    }
+}
+
+.experiences {
+    display: grid;
+    background-color: black;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 'left center right';
+    /* -webkit-box-shadow: -33px 23px 2px 2px rgba(0,0,0,1);
+    -moz-box-shadow: -33px 23px 2px 2px rgba(0,0,0,1);
+    box-shadow: -33px 23px 2px 2px rgba(0,0,0,1); */
+}
+
+@media screen and (max-width: 1000px){
+    .experiences {
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    'left'
+    'center'
+    'right';
+    }
+
+    .right-block{
+        justify-content: center;
+    }
+}
+
+.left-card{
+    grid-area: left;
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+}
+
+.middle-card{
+    grid-area: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+
+.right-card {
+    grid-area: right;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.card{
+    padding: 15px;
+    margin: 0 auto;
+}
+
+.atlantic {
+  background-color: DodgerBlue;
+  border: none;
+  color: white;
+  padding: 12px 30px;
+  cursor: pointer;
+  font-size: 20px;
+   text-decoration: none;
+}
+
+.atlantic:hover {
+  background-color: RoyalBlue;
+  text-decoration: none;
+}
+
 </style>

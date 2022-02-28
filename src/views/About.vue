@@ -66,7 +66,6 @@
 .intro {
     display: grid;
     background-color: white;
-    border: 10px solid black;
     grid-template-columns: 1fr 1fr;
     grid-template-areas: 'left right';
     /* -webkit-box-shadow: -33px 23px 2px 2px rgba(0,0,0,1);
