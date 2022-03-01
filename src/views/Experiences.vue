@@ -32,7 +32,7 @@
                     <img class="card-img-top" src="../assets/ydays.png" alt="Card image cap">
                         <div class="card-body">
                             <h4 class="card-title">Projet YDays</h4>
-                            <p class="card-text">Les Ydays, ce sont 10 journées dans le calendrier académique, dédiées à la conduite de projets. Lors des Ydays, nous sommes een groupe est construisons notre projet de A à Z</p>
+                            <p class="card-text">Les Ydays, ce sont 10 journées dans le calendrier académique, dédiées à la conduite de projets. Lors des Ydays, nous sommes en groupe est construisons notre projet de A à Z</p>
                             <a target="_blank" href="https://www.ynov-nantes.com/qui-sommes-nous/ydays/" download="" class="atlantic">Pour plus d'info</a>
                         </div>                 
                     </div>
@@ -56,6 +56,7 @@
 
 h1{
     color: var(--mainText);
+    padding: 50px;
 }
 
 p {
@@ -78,6 +79,8 @@ p {
     background-color: black;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas: 'left center right';
+    padding-top: 30px;
+    margin-bottom: 75px;
     /* -webkit-box-shadow: -33px 23px 2px 2px rgba(0,0,0,1);
     -moz-box-shadow: -33px 23px 2px 2px rgba(0,0,0,1);
     box-shadow: -33px 23px 2px 2px rgba(0,0,0,1); */
@@ -120,6 +123,10 @@ p {
 .card{
     padding: 15px;
     margin: 0 auto;
+}
+
+.card-text{
+    padding-bottom: 20px;
 }
 
 .atlantic {

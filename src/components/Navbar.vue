@@ -16,6 +16,7 @@
         <li><router-link to="/about">About me</router-link></li>
         <li><router-link to="/Projets">Projets</router-link></li>
         <li><router-link to="/Experiences">Experiences</router-link></li>
+        <li><router-link to="/Contact">Contact</router-link></li>
       </ul>
     </nav>
   </div>
