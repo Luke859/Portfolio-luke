@@ -19,7 +19,7 @@
 
                 <div class="middle-card">
                     <div class="card" style="width: 18rem;">
-                    <img class="card-img-top" src="../assets/LOGO CHALLENGE 48H.png" alt="Card image cap" style="width: 178px; margin: 0 auto;">
+                    <img class="card-img-top" src="../assets/challenge48h.png" alt="Card image cap" style="width: 178px; margin: 0 auto;">
                         <div class="card-body">
                             <h4 class="card-title"> Challenge 48h</h4>
                             <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet a voluptatem architecto, necessitatibus sapiente qui distinctio praesentium vero harum eos ut, totam quos asperiores voluptatum labore minima cupiditate aliquid quam!</p>
