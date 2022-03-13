@@ -1,4 +1,7 @@
 <template>
+    <svg xmlns="http://www.w3.org/2000/svg" style="vertical-align: top; background-color: #42a5f5" viewBox="0 0 1440 320">
+    <path fill="#1565c0" fill-opacity="1" d="M0,288L48,272C96,256,192,224,288,197.3C384,171,480,149,576,165.3C672,181,768,235,864,250.7C960,267,1056,245,1152,250.7C1248,256,1344,288,1392,304L1440,320L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+    </svg>
     <section class="s5">
         <div class="main-container">
             <h1>ME CONTACTER</h1>
@@ -7,13 +10,13 @@
                     <input type="hidden" name="_captcha" value="false">
                     <input class="input-field" type="text" name="Prénom" placeholder="Prénom *" required>
                     <input class="input-field" type="text" name="Nom" placeholder="Nom *" required>
-                    <input class="input-field" type="text" name="Email" placeholder="Email *" required>
+                    <input class="input-field" type="email" name="Email" placeholder="Email *" required>
                     <input type="hidden" name="_next" value="http://localhost:3000/">
                     <textarea class="input-field" name="Message" required></textarea>
                     <!-- <input type="file" name="attachment" accept="image/png, image/jpeg"> -->
                     <input id="submit-btn" type="submit" value="Envoyer">
                 </form>
-
+                
                 <div class="contact-text">
                     <h3>Informations</h3>
                     <p>Si vous avez plus de questions n'hésiter pas à me contacter</p>
@@ -39,18 +42,31 @@
 
 <style>
 
+.s5 {
+    background-color: #1565c0;
+    overflow: auto;
+
+}
+
+.s5 h1{
+    padding-bottom: 50px;
+    color: black;
+    font-family: 'Chewy', cursive;
+    font-size: 60px; 
+    text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
+}
 
 .contact {
     display: grid;
-    background-color: white;
     grid-template-columns: 1fr 1fr;
     grid-template-areas: 'left right';
+    column-gap: 60px;
     /* -webkit-box-shadow: -33px 23px 2px 2px rgba(0,0,0,1);
     -moz-box-shadow: -33px 23px 2px 2px rgba(0,0,0,1);
     box-shadow: -33px 23px 2px 2px rgba(0,0,0,1); */
 }
 
-@media screen and (max-width: 700px){
+@media screen and (max-width: 1300px){
     .contact {
     grid-template-columns: 1fr;
     grid-template-areas: 
@@ -61,6 +77,8 @@
     .contact-text{
         justify-content: center;
         text-align: center;
+        width: 500px;
+        margin: 0 auto;
     }
 }
 
@@ -112,10 +130,12 @@
 
 .contact-text{
     grid-area: right;
+    background-color: white;
     display: grid;
     display: block;
-    text-align: left;
-    padding-left: 100px;
+    padding: 40px;
+    border-radius: 10px;
+    margin-bottom: 30px;
 }
 
 .fa {
@@ -123,11 +143,13 @@
     font-size: 20px;
     width: 50px;
     text-decoration: none;
+    color: black;
 }
 
 .fa:hover{
     text-decoration: none;
     list-style-type: none;
+    color: white
 
 }
 
@@ -137,18 +159,21 @@
     padding-top: 30px;
 }
 
-.reseaux li {
+.reseaux {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.reseaux > li {
+    justify-content: center;
+    align-items: center;
     list-style-type: none;
     font-size: 50px;
-    padding-top: 70px;
-    float: left;
+    padding-top: 10px;
+    margin: 0 auto;
 }
 
-.fa-twitter{
-    padding-left: 20px;
-}
-
-.fa-instagram{
-    padding-left: 40px;
+.reseaux li a:hover{
+    color: rgb(0, 127, 255);
 }
 </style>
