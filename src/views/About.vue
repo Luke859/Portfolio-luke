@@ -127,7 +127,7 @@
     margin: 0 auto;
     }
 
-    .s2 h1{
+    .s2-title{
     padding: 10px;
     text-align: center;
     -webkit-transform: rotate(0deg);
@@ -142,15 +142,15 @@
     grid-area: right;
     display: grid;
     align-content: center;
-    background-color: rgb(0, 127, 255);
+    background-color: white;
     border-radius: 20px;
+    padding: 15px;
+    border: 10px solid black;
 }
 
 #text {
-    width: 500px;
-    padding: 10px;
-    padding-top: 30px;
-    margin: 0 auto;
+    padding: 15px;
+    background-color: white;
     color: black;
 }
 
@@ -163,61 +163,51 @@
     color: black;
 }
 
-
-
 #info{
     display: flex;
-    width: 500px;
-    height: auto;
-    justify-content: center;
-    flex-wrap: wrap;
-    padding: 15px;
-    margin: 0 auto;
-
-    font-size: 90%;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    background-color: white;
+    /* align-items:center; */
 }
 
 #info .list{
     display: flex;
-    justify-content: center;
-    width: 130px;
-    height: auto;  
+    gap: 10px;
     border-bottom: 1px solid black;
-    margin-left: 100px;
-    margin-top: 40px;
+    padding: 15px;
+    width: 300px;
+    align-items: center;
+    margin-bottom: 5px;
+    
 }
 
 #info .list label{
     display: flex;
-    justify-content: left; 
     font-weight: bold;
     color: black;
+    margin-bottom: 0px;
 }
 
 #info .list p{
-    display: flex;
-    justify-content: left; 
-    width: 200px;
+    display: flex; 
     color: black;
+    margin-bottom: 0px;
 }
 
 #info .list .apps {
     display: flex;
-    flex-wrap: nowrap;
-}
-
-.reseaux > li {
-    justify-content: center;
-    align-items: center;
     list-style-type: none;
-    font-size: 10px;
-    padding-top: 10px;
-    margin: 0 auto;
+    font-size: 20px;
 }
 
-.reseaux li a:hover{
-    color: white;
+.apps li a:hover{
+    color: rgb(0, 127, 255);
+    list-style-type: none;
 }
+
+
+/* Côté gauche de ma section */
 
 .left-block{
     grid-area: left;
@@ -255,7 +245,8 @@
 
 .left-block .find {
     position: flex;
-    background-color: rgb(0, 127, 255);
+    background-color: white;
+    border: 10px solid black;
     margin-top: 20px;
     border-radius: 20px;
     padding: 20px;

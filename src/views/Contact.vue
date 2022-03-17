@@ -21,7 +21,7 @@
                     <h3>Informations</h3>
                     <p>Si vous avez plus de questions n'hésiter pas à me contacter</p>
                     <div class="info">
-                        <li><a class="fa fa-phone" ></a> +33 671771971</li>
+                        <li><a class="fa fa-phone" ></a> 06 71 77 19 71</li>
                         <li><a class="fa fa-envelope" ></a> lukebryan@orange.fr</li>
                         <li><a class="fa fa-map-marker" ></a> 13 Rue Stéphane LeDuc, Nantes 44100</li>
                     </div>
@@ -113,15 +113,13 @@
 }
 
 #submit-btn{
-    margin-top: 10px;
-    width: 20%;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    margin-top: 17px;
+    padding: 10px;
     border: none;
+    border-radius: 10px;
     background-color: black;
     color: white;
     float: left;
-    border-radius: 10px;
 }
 
 #submit-btn:hover{
@@ -131,8 +129,6 @@
 .contact-text{
     grid-area: right;
     background-color: white;
-    display: grid;
-    display: block;
     padding: 40px;
     border-radius: 10px;
     margin-bottom: 30px;
@@ -165,8 +161,6 @@
 }
 
 .reseaux > li {
-    justify-content: center;
-    align-items: center;
     list-style-type: none;
     font-size: 50px;
     padding-top: 10px;

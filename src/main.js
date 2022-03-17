@@ -7,7 +7,7 @@ createApp(App)
 .mount('#app')
 
 new Vue({
-    el: "#allTheNav",
+    el: ".primary-header",
     data: {
       opened: false
     }

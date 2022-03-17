@@ -8,7 +8,6 @@ import Contact from './views/Contact.vue';
 </script>
 
 <template>
-
 <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Chewy&display=swap" rel="stylesheet">

@@ -1,17 +1,17 @@
-<script setup>
+<script setup> 
 
 </script>
 
 <template>
-  <div id="allTheNav">
-    <input type="checkbox" id="navi-toggle" class="checkbox" />
-    <label for="navi-toggle" class="button">
-      <span class="icon">&nbsp;</span>
-    </label>
-    <div class="background">&nbsp;</div>
-
-    <nav class="nav">
-      <ul class="list">
+  <header class="primary-header">
+    <button class="nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
+      <span class="sr-only">Menu</span> <!-- caché visuelement !--> 
+    </button>
+    <div class="logo">
+      <img src="../assets/Jeux.png">
+    </div>
+    <nav>
+      <ul class="primary-navigation" data-visible="false">
         <li><router-link to="/">Home</router-link></li>
         <li><router-link to="/about">About me</router-link></li>
         <li><router-link to="/Projets">Projets</router-link></li>
@@ -19,137 +19,94 @@
         <li><router-link to="/Contact">Contact</router-link></li>
       </ul>
     </nav>
-  </div>
-
+  </header>
 </template>
 
 <style>
 
-.checkbox {
+.primary-header{
+  background: #1565c0;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-toggle{
   display: none;
 }
 
-.button {
-  position: fixed;
-  background-color: rgb(0, 127, 255);
-  height: 5rem;
-  width: 5rem;
+.logo{
+  margin: 1rem;
+}
+
+.logo img{
+  width : 150px;
+  height : 150px;
   border-radius: 50%;
-  top: 5vh; 
-  left: 2vw; 
-  z-index: 2000;
-  text-align: center; 
-  cursor: pointer;
 }
 
-/* @media screen and (min-width: 700px) { */
-.background {
-  position: fixed;
-  height: 4rem;
-  width: 4rem;
-  border-radius: 50%;
-  margin-top: -10vh; 
-  margin-left: -20vw;
-  background: rgb(0, 127, 255);
-  transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
-}
-/* } */
-
-.nav {
-  position: fixed;
-  height: 300px;
-  top: 0;
-  right: -60vw;
-  z-index: 1500;
-  opacity: 0;
-  width: 0;
-  transition: all 0.8s;
-}
-
-.list {
-  position: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  margin-top: 13%;
-  margin-left: 5%;
-  transform: translate(-50%, -50%);
+.primary-navigation {
+  display: flex;
+  gap: var(--gap, 2rem);
   list-style: none;
-  text-align: center;
-  width: 8%;
+  padding: 0;
+  margin-top: 20px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  background: hsl(0 0% 100% /0.1);
+  backdrop-filter: blur(1rem);
+  
 }
 
-.list a {
-  position: flex;
+.primary-navigation[data-visible="true"]{
+  transform: translateX(0%);
+}
+
+.primary-navigation a {
+  display: flex;
+  padding: 20px;
+  font-size: 18px;
   color: black;
-  font-weight: bold;
-  font-size: 175%;
+  text-decoration: none;
+  
+}
+
+.primary-navigation a:hover{
+  display: flex;
+  color: white;
   text-decoration: none;
 }
 
-.list a:hover{
-  position: flex;
-  color: white;
-  border-radius: 20px;
+@media (max-width: 55em) {
+  .primary-navigation{
+    --gap: 2em;
+    position: fixed;
+    z-index:1000;
+    inset: 0 0 0 30%;
+    flex-direction: column;
+    padding: min(10vh, 10rem) 30px;
+    transform: translateX(100%);
+    transition: transform 350ms ease-out;
+  }
+
+  .nav-toggle{
+    position: fixed;
+    display: block;
+    z-index: 9999;
+    background: black;
+    border: none;
+    border-radius: 5px;
+    width: 2rem;
+    aspect-ratio: 1;
+    top: 2rem;
+    right: 2rem;
+  }
 }
 
-.checkbox:checked ~ .background {
-  transform: scale(23);
+@media (min-width: 68em) {
+  .primary-navigation{
+    padding-inline: clamp(3rem, 10vw, 10rem);
+  }
 }
-
-.checkbox:checked ~ .nav {
-  opacity: 1;
-  width: 100%;
-  right: 0;
-}
-
-.icon {
-  position: flex;
-  margin-top: 50%;
-  margin-left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.icon, .icon::before, .icon::after {
-  width: 3rem;
-  height: 2px;
-  background-color: black;
-  display: inline-block;
-}
-
-.icon::before, .icon::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  transition: all 0.2s;
-}
-
-.icon::before {
-  top: -0.8rem;
-}
-
-.icon::after {
-  top: 0.8rem;
-}
-
-.button:hover icon:before {
-  top: -1rem;
-}
-
-.button:hover icon::after {
-  top: 1rem;
-}
-
-.checkbox:checked + .button .icon {
-  background-color: transparent;
-}
-
-.checkbox:checked + .button .icon::before {
-  top: 0;
-  transform: rotate(135deg);
-}
-.checkbox:checked + .button .icon::after {
-  top: 0;
-  transform: rotate(-135deg);
-}
-
 </style>
