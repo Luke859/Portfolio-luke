@@ -37,7 +37,9 @@
 }
 
 .logo{
+  display: flex;
   margin: 1rem;
+  top: 500px;
 }
 
 .logo img{
