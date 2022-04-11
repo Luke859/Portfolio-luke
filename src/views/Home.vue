@@ -7,13 +7,12 @@
                     <h3>Etudiant en Informatique</h3>
                     <h2>Portfolio</h2>
                 </div>
-                <div class="cercle">
-                    <div id="moncercle">
-                        <div id="moncarre"></div>
-                        <div id="montriangle"></div>
-                        <div id="montriangle2"></div>
-                        <div id="montriangle3"></div>
-                    </div>
+                <div class="phrase">
+                    <ul>
+                        <li>
+                            <a data-text="&nbsp;Luke&nbsp;Jones">&nbsp;Luke&nbsp;Jones</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -24,7 +23,7 @@
 
 .s1{
     overflow: auto;
-    background-color: #1565c0;
+    background-color: BLACK;
 }
 
 .main-container {
@@ -57,63 +56,52 @@
     font-size: 75px;
 }
 
-.cercle{
+.phrase{
     grid-area: left;
     display: flex;
     justify-content: center;
 }
 
-#moncercle{ 
-    background: #d9d9d9;;
-	border-radius:150px;
-	width:300px;
-	height:300px;
-    margin-top: 50px; 
-    margin-left: -200px;
-    /* opacity: 0.3; */
+.phrase ul{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.phrase ul li{
+    position: relative;
+    list-style: none;
+}
+.phrase ul li a{
+    position: relative;
+    font-size: 4em;
+    text-decoration: none;
+    line-height: 1em;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: black;
+    -webkit-text-stroke: 1px rgba(255,255,255,0.5)
+}
+.phrase ul li a::before{
+    content: attr(data-text);
+    position: absolute;
+    color: #42a5f5;
+    width: 0%;
+    overflow: hidden;
+    transition: 1s;
+    border-bottom: 5px solid #42a5f5;
+    -webkit-text-stroke: 1px #42a5f5;
+}
+.phrase ul li a:hover::before{
+    width: 100%;
+    text-shadow: 2px 2px 10px #42a5f5;
 }
 
-#moncarre{
-    z-index: 4;
-    position: absolute;
-	background: #5271ff;
-	width:250px;
-	height:250px;
-    margin-top: 230px;
-    margin-left: 200px;
-    opacity: 0.3;
-}
 
-#montriangle{
-    z-index:3;
-    position: absolute;
-    border-left: 150px solid transparent;
-    border-right: 150px solid transparent;
-    border-bottom: 300px solid #00c2cb;
-    margin-top: 100px;
-    opacity: 0.5;
-}
 
-#montriangle2{
-    z-index: 1;
-    position: absolute;
-    border-left: 150px solid transparent;
-    border-right: 150px solid transparent;
-    border-bottom: 300px solid #38b6ff;
-    margin-top: 200px;
-    opacity: 0.5;
-}
 
-#montriangle3{
-    z-index: 2;
-    position: absolute;
-    border-left: 150px solid transparent;
-    border-right: 150px solid transparent;
-    border-bottom: 300px solid red;
-    margin-top: 150px;
-    margin-left: 75px;
-    opacity: 0.5;
-}
+
+
 
 
 @media screen and (max-width: 900px){
@@ -123,7 +111,7 @@
     'left'
     'right';
     }
-    .cercle{
+    .phrase{
         justify-content: center;
     }
 }

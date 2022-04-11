@@ -3,7 +3,7 @@
     <path fill="#42a5f5" fill-opacity="1" d="M0,160L60,170.7C120,181,240,203,360,197.3C480,192,600,160,720,165.3C840,171,960,213,1080,213.3C1200,213,1320,171,1380,149.3L1440,128L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path>
     </svg>
     <section class="s2">
-        <div class="main-container">
+        <div id="about" class="main-container">
             <h1 class="s2-title">À propos de moi</h1>
             <div class="intro">
                 <div class="right-block">
