@@ -5,6 +5,7 @@ import Projets from './views/Projets.vue';
 import About from './views/About.vue';
 import Home from './views/Home.vue';
 import Contact from './views/Contact.vue';
+
 </script>
 
 <template>
@@ -18,11 +19,13 @@ import Contact from './views/Contact.vue';
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
   <Navbar/>
-  <router-view v-slot="{ Component }">
-    <transition name="fade" mode="out-in">
-      <component :is="Component" />
-    </transition>
-  </router-view>
+
+  <router-view v-slot="{ Component, route }">
+  <transition name="slide">
+    <component :is="Component" />
+  </transition>
+</router-view>
+
 </template>
 
 <style>
@@ -39,13 +42,13 @@ body {
   color: #2c3e50;
 }
 
-.fade-enter-from,
-.fade-leave-to {
-  opacity: 0;
+.slide-enter-active,
+.slide-leave-active {
+  transition: opacity 0.5s ease; 	
 }
 
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 0.5s ease-out;
+.slide-enter-from,
+.slide-leave-to{
+  opacity: 0;
 }
 </style>

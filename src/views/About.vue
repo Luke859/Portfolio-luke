@@ -57,8 +57,6 @@
                         <h4>Ce que je recherche ?</h4>
                         <br>
                         <p>
-                        - un stage de 6 semaines à partir du 17 mai jusqu'à fin juin en informatique
-                        <br>
                         - une alternance pour la rentrer en Septembre
                         </p>
                     </div>
@@ -144,7 +142,8 @@
     align-content: center;
     background-color: white;
     border-radius: 20px;
-    padding: 15px;
+    padding: 20px;
+    margin-bottom: 30px;
     border: 10px solid black;
 }
 
@@ -209,10 +208,6 @@
 
 /* Côté gauche de ma section */
 
-.left-block{
-    grid-area: left;
-}
-
 #Luke-photo{
     display: block;
     margin: 0 auto;
@@ -247,7 +242,7 @@
     position: flex;
     background-color: white;
     border: 10px solid black;
-    margin-top: 20px;
+    margin-top: 80px;
     border-radius: 20px;
     padding: 20px;
     padding-top: 30px;
