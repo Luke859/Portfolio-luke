@@ -17,6 +17,39 @@
                         <a href="#" class="button">Learn more</a>
                     </div>
                 </div>
+                <div class="card-projets">
+                    <div class="card-content">
+                        <h2 class="card-title">
+                        Projets 2
+                        </h2>
+                        <p class="card-body">
+                        text
+                        </p>
+                        <a href="#" class="button">Learn more</a>
+                    </div>
+                </div>
+                <div class="card-projets">
+                    <div class="card-content">
+                        <h2 class="card-title">
+                        Projets 3
+                        </h2>
+                        <p class="card-body">
+                        Ok
+                        </p>
+                        <a href="#" class="button">Learn more</a>
+                    </div>
+                </div>
+                <div class="card-projets" style="">
+                    <div class="card-content">
+                        <h2 class="card-title">
+                        Projets 3
+                        </h2>
+                        <p class="card-body">
+                        Ok
+                        </p>
+                        <a href="#" class="button">Learn more</a>
+                    </div>
+                </div>
 
             </div>
         </div>
@@ -50,11 +83,14 @@
 
 .projets{
     display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 75px;
     min-height: 100vh;
-    place-items: center;
     line-height: 1.6;
     background: black;
     font-family: sans-serif;
+    padding: 50px 50px 50px 50px;
+    /* min-width: 990px; */
 }
 
 .projets .card-projets{
@@ -63,10 +99,13 @@
     background-size: cover;
     padding: 10rem 0 0;
     max-width: 35ch;
+    min-width: 220px;
+    max-height: 40ch;
     border-radius: 0.5em;
     overflow: hidden;
     transition: transform 500ms ease;
 }
+
 .projets .card-projets:hover, .card-projets:focus-within{
     transform: scale(1.05)
 }
@@ -87,6 +126,7 @@
 .projets .card-content .card-body{
     color: white;
 }
+
 .projets .card-content .card-title::after{
     content: "";
     position: absolute;
