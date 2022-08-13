@@ -5,7 +5,6 @@ import Projets from './views/Projets.vue';
 import About from './views/About.vue';
 import Home from './views/Home.vue';
 import Contact from './views/Contact.vue';
-
 </script>
 
 <template>
@@ -17,14 +16,15 @@ import Contact from './views/Contact.vue';
 <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css" integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ==" crossorigin=""/>
 
   <Navbar/>
 
-  <router-view v-slot="{ Component, route }">
+  <router-view> </router-view>
+  <!-- v-slot="{ Component, route }"
   <transition name="slide">
     <component :is="Component" />
-  </transition>
-</router-view>
+  </transition> -->
 
 </template>
 
@@ -42,7 +42,7 @@ body {
   color: #2c3e50;
 }
 
-.slide-enter-active,
+/* .slide-enter-active,
 .slide-leave-active {
   transition: opacity 0.5s ease; 	
 }
@@ -50,5 +50,5 @@ body {
 .slide-enter-from,
 .slide-leave-to{
   opacity: 0;
-}
+} */
 </style>

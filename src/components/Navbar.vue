@@ -17,6 +17,7 @@
         <li><router-link to="/Projets">Projets</router-link></li>
         <li><router-link to="/Experiences">Experiences</router-link></li>
         <li><router-link to="/Contact">Contact</router-link></li>
+        <li><router-link to="/Entreprise">Entreprise</router-link></li>
       </ul>
     </nav>
   </header>

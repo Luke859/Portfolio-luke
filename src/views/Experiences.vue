@@ -13,7 +13,7 @@
                                 <p class="card-text">Travail dans un Parc aquatique "Atlantic Toboggan" à Saint Jean de Monts, d'une durée de 2 mois.
                                     Poste de surveillant des toboggans : la mission -> surveillance des clients pour assurer leurs sécurités.
                                     Travail en équipe et individuel.</p>
-                                <a target="_blank" href="https://www.atlantic-toboggan.com/" download="" class="atlantic">Lien vers le site</a>
+                                <a target="_blank" href="https://www.atlantic-toboggan.com/" download="" class="button_redirect">Lien vers le site</a>
                             </div>                 
                         </div>
                     </div>
@@ -24,7 +24,7 @@
                             <div class="card-body">
                                 <h4 class="card-title"> Challenge 48h</h4>
                                 <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet a voluptatem architecto, necessitatibus sapiente qui distinctio praesentium vero harum eos ut, totam quos asperiores voluptatum labore minima cupiditate aliquid quam!</p>
-                                <a target="_blank" href="https://www.ynov-nantes.com/actualites/challenge-48h/" download="" class="atlantic">Plus de detail </a>
+                                <a target="_blank" href="https://www.ynov-nantes.com/actualites/challenge-48h/" download="" class="button_redirect">Plus de detail </a>
                             </div>                 
                         </div>
                     </div>
@@ -35,7 +35,7 @@
                             <div class="card-body">
                                 <h4 class="card-title">Projet YDays</h4>
                                 <p class="card-text">Les Ydays, ce sont 10 journées dans le calendrier académique, dédiées à la conduite de projets. Lors des Ydays, nous sommes en groupe est construisons notre projet de A à Z</p>
-                                <a target="_blank" href="https://www.ynov-nantes.com/qui-sommes-nous/ydays/" download="" class="atlantic">Pour plus d'info</a>
+                                <a target="_blank" href="https://www.ynov-nantes.com/qui-sommes-nous/ydays/" download="" class="button_redirect">Pour plus d'info</a>
                             </div>                 
                         </div>
                     </div>
@@ -83,6 +83,7 @@ p {
 .experiences {
     display: grid;
     background-color: black;
+    border-radius: 10px;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas: 'left center right';
     padding-top: 30px;
@@ -136,17 +137,18 @@ p {
     padding-bottom: 20px;
 }
 
-.atlantic {
+.button_redirect {
   background-color: DodgerBlue;
   border: none;
   color: white;
   padding: 12px 30px;
   cursor: pointer;
   font-size: 20px;
-   text-decoration: none;
+  text-decoration: none;
+  border-radius: 5px;
 }
 
-.atlantic:hover {
+.button_redirect:hover {
   background-color: RoyalBlue;
   text-decoration: none;
 }

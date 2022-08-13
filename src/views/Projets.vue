@@ -9,10 +9,11 @@
                 <div class="card-projets">
                     <div class="card-content">
                         <h2 class="card-title">
-                        Projets
+                        Application mobile
                         </h2>
-                        <p class="card-body">
-                        Nice my project text
+                        <p class="card-body1">
+                        Le but du projet mettre en place une application mobile(Android/iOS) permettant de renseigner un annuaire des objets dans une maison/un appartement.
+                        Le language utilisé est React Native. 
                         </p>
                         <a href="#" class="button">Learn more</a>
                     </div>
@@ -39,7 +40,40 @@
                         <a href="#" class="button">Learn more</a>
                     </div>
                 </div>
-                <div class="card-projets" style="">
+                <div class="card-projets">
+                    <div class="card-content">
+                        <h2 class="card-title">
+                        Projets 3
+                        </h2>
+                        <p class="card-body">
+                        Ok
+                        </p>
+                        <a href="#" class="button">Learn more</a>
+                    </div>
+                </div>
+                <div class="card-projets">
+                    <div class="card-content">
+                        <h2 class="card-title">
+                        Projets 3
+                        </h2>
+                        <p class="card-body">
+                        Ok
+                        </p>
+                        <a href="#" class="button">Learn more</a>
+                    </div>
+                </div>
+                <div class="card-projets">
+                    <div class="card-content">
+                        <h2 class="card-title">
+                        Projets 3
+                        </h2>
+                        <p class="card-body">
+                        Ok
+                        </p>
+                        <a href="#" class="button">Learn more</a>
+                    </div>
+                </div>
+                <div class="card-projets">
                     <div class="card-content">
                         <h2 class="card-title">
                         Projets 3
@@ -111,7 +145,7 @@
 }
 
 .projets .card-content{
-    background: linear-gradient(hsl(0 0% 0% / 0), hsl(20 0% 0% / 0.3) 20%, hsl(0 0% 0% / 1));
+    background: linear-gradient(hsl(0 0% 0% / 0), hsl(20 0% 0% / 0.3) 10%, hsl(0 0% 0% / 1));
     --padding: 1.5rem;
     padding: var(--padding);
     right: 0;
@@ -127,17 +161,22 @@
     color: white;
 }
 
+.projets .card-content .card-body1{
+    color: white;
+    font-size: 10px;
+}
+
 .projets .card-content .card-title::after{
     content: "";
     position: absolute;
     height: 4px;
     left: calc(var(--padding) * -1);
     top: 40px;
-    bottom: 0;
+    bottom: 20px;
     width: calc(100% + var(--padding));
     background: #42a5f5;
     transform: scaleX(0);
-    transition: transform 800ms ease;
+    transition: transform 700ms ease;
     transform-origin: left;
 }
 
@@ -165,7 +204,7 @@
 
 @media (hover){
     .card-content{
-        transform: translateY(65%);
+        transform: translateY(60%);
         transition: transform 500ms ease;
     }
 
